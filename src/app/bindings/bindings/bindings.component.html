@@ -1,0 +1,54 @@
+<!--
+<p>bindings works!</p>
+-->
+
+<h1>4 types of Component to template bindings below;</h1>
+
+<!-- binding 1 - {{}} - String Interpolation -->
+<h2>Binding 1 - 'String Interpolation' to title: {{myTitle}}</h2>
+<hr>
+
+<!-- binding 2 - [] - Property binding-->
+<div>
+    <h2>Binding -2 - Property Binding</h2><img [src]="myImgSrc" alt="">
+</div>
+<hr>
+
+<!-- binding 3 - () - event binding -->
+<div>
+    <h3>Binding 3 below - Event Binding - </h3>
+    <button (click)="incrementMyClickCount()">Click Me to increment myClickCount</button>
+    <h4>myClickCount is: {{myClickCount}}</h4>
+</div>
+<hr>
+
+<!-- binding 4a - [()] - 2 way binding using [(ngModel)] -->
+<div>
+    <h3>Binding 4a below - 2 way binding via [(ngModel)], after importing FormsModule in ..module.ts</h3>
+    <input type="text" name="nameOfInput1a" [(ngModel)] = "name4twoWayBindingUsingNgModel">
+    <h4>name4twoWayBindingUsingNgModel is: {{name4twoWayBindingUsingNgModel}}</h4>
+</div>
+<hr>
+
+<!-- binding 4b - [()] - 2 way binding split using [ngModel] and (ngModelChange)-->
+<div>
+    <h3>Binding 4b below - 2 way binding split using [ngModel] and (ngModelChange), after importing FormsModule in ..module.ts</h3>
+    <input type="text" name="nameOfInput1b" [ngModel] = "name4twoWayBindingUsingSplitNgModelAndNgModelChange" (ngModelChange)="setName4twoWayBindingUsingSplitNgModelAndNgModelChange($event)">
+    <h4>name4twoWayBindingUsingSplitNgModelAndNgModelChange is: {{name4twoWayBindingUsingSplitNgModelAndNgModelChange}}</h4>
+</div>
+<hr>
+
+<!-- binding 4c - [()] - 2 way binding using [(ngModel)] linked to a property with setter/getter -->
+<div>
+    <h3>Binding 4c below - 2 way binding using [(ngModel)] linked to a property with setter/getter, after importing FormsModule in ..module.ts</h3>
+    <input type="text" name="nameOfInput1c" [(ngModel)] = "name4twoWayBindingUsingPropertySetterGetter">
+    <h4>name4twoWayBindingUsingPropertySetterGetter is: {{name4twoWayBindingUsingPropertySetterGetter}}</h4>
+</div>
+<hr>
+
+<!-- binding 4c - [()] - 2 way binding using [(ngModel)] and allowing component to access html element via binding templateRef variable in .html to ElementRef in .ts via @ViewChild -->
+<div>
+    <h3>Binding 4c - [()] - 2 way binding using [(ngModel)] and allowing component to access html element via binding templateRef variable in .html to ElementRef in .ts via @ViewChild</h3>
+    <input type="text" name="nameOfInput1c" [(ngModel)] = "name4twoWayBindingUsingNgModel2" #templateRef2input>
+    <h4>name4twoWayBindingUsingNgModel2 is: {{name4twoWayBindingUsingNgModel2}}</h4>
+</div>

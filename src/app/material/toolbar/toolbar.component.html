@@ -1,0 +1,15 @@
+<!-- -->
+<p>toolbar works!</p>
+<!-- -->
+<div>
+    <mat-toolbar color="primary" class="mat-elevation-z6">
+        <span>
+            <!-- https://material.io/resources/icons/?style=baseline  NOTE ilker this link has list of icons available -->
+            <mat-icon aria-hidden="false" aria-label="My angMat icon" >eco</mat-icon>MyToolbar
+        </span>
+
+        <a href="hello">one hello-notUsingAngular-routingLink</a>
+        <a [routerLink]="['/hello']" routerLinkActive="router-link-active" >two</a>
+        <a mat-button [routerLink]="['/hello']" routerLinkActive="router-link-active" >three</a>
+    </mat-toolbar>
+</div>

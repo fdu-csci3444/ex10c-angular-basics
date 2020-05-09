@@ -1,6 +1,36 @@
 # Ex10cAngularBasics
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
+- uses angular modules
+- uses angular routes
+- uses angular material
+- shows how to use "static modules" (see modules bindings, ..) 
+- shows how to use "dynamic modules" (see  ..)
+- shows how to use "routes" along with "dynamic modules" (see modules ..)
+- shows how to customize "tslint" rules via tslint.json (see tslint.json's git commit log)
+- shows 4 ways of "binding" a component's class(controller, .ts file) to it's view(template, .html file) (see bindings component in bindings module)
+- shows .. ways of "component interaction", how parent/child components or sibling components can interact(pass data or events or share data) between them
+
+## Parts of project
+### 4 ways of "Class to Template binding" for a component
+- bindings is the module(directory) that has code for it
+- bindings component(bindings/bindings) shows all 4 ways
+
+### ways of "Component Interaction"(pass data or events or share data) between Components(like parent/child, siblings, etc)
+- componentInteractions is the module(directory) that has code for it
+
+
+## To run via dev server
+- 1st time need to install all dependencies in package.json by running `"npm install"`
+- then just run via `"ng serve"` or `"ng serve -o"` or `"npm start"` (which in turn runs "ng serve" as defined in "start" script in package.json)
+- if default port 4200 is already taken by another running app, can specify a different port (like 4201) via `"npm server -o --port 4201"`
+```dos
+cd ex10c-angular-basics
+npm install
+ng serve -o
+npm start
+ng serve -o --port 4201
+```
 
 ## Development server
 
